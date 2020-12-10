@@ -22,5 +22,8 @@
     "gulp-terser": "^2.0.0",
     "imagemin": "^7.0.1",
     "postcss": "^8.1.10"
+  },
+  "dependencies": {
+    "hamburgers": "^1.1.3"
   }
 }

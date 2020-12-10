@@ -1,6 +1,6 @@
 // VARS
 @import './00_helpers/00_variables/01_colors';
-@import './00_helpers/00_variables/01_variables';
+@import './00_helpers/00_variables/02_variables';
 
 // MIXINS
 @import './00_helpers/01_mixins/01_hocus';
@@ -18,16 +18,22 @@
 @import './00_helpers/02_components/01_buttons';
 @import './00_helpers/02_components/02_span';
 @import './00_helpers/02_components/03_mouseScroll';
-@import './010_helpers/02_components/04_underline';
+@import './00_helpers/02_components/04_underline';
+@import './00_helpers/02_components/05_hide';
 
 // BASE
 @import './01_base/00_reset';
 @import './01_base/01_typography';
 @import './01_base/02_fonts';
 
-// UTILS'
-@import './02_utils/01_hide';
+// HAMBURGER
+@import "../../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+
+
+// ----------------------------------------- //
+// # MOBILE
+// ----------------------------------------- //
 
 body {
-    background:grey;
+    background:#959595;
 }
