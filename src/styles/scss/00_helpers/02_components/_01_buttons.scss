@@ -1,0 +1,21 @@
+.btn {
+    @include fsize($f-xs, $v-xs);
+    text-align: center;
+    display: inline-block;
+    width: 160px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid $c-echo;
+    transition: transform .3s, background .3s, border-color .3s;
+    letter-spacing: 2px;
+
+    &--primary {
+        background: $c-echo;
+        color: $c-alfa;
+
+        @include hocus {
+            background: lighten($c-echo, 10%);
+        }
+    }
+}

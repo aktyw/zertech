@@ -1,19 +1,19 @@
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 62.5%;
     line-height: 1.6;
 }
 
 h1 {
-    @include fsize (2rem, 1vw);
+    @include fsize (1.8rem, 0.9vw);
 }
 
 h2 {
-    @include fsize (1.5rem, 0.5vw);
+    @include fsize (1.4rem, 0.5vw);
 }
 
 h3 {
-    @include fsize (1.2rem, 0.4vw);
+    @include fsize (1.1rem, 0.4vw);
 }
 
 h4 {

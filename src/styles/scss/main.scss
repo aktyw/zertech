@@ -35,5 +35,101 @@
 // ----------------------------------------- //
 
 body {
-    background:#959595;
+    background:$c-alfa; //temp
+}
+
+.top { // top of header
+    position: fixed;
+    width: 100%;
+    height: $header;
+    background: $c-charlie;
+    z-index: 900;
+}
+
+.logo {
+    &__link{ //temp
+        @include fsize($f-l);
+        color: $c-alfa;
+        line-height: $header;
+        text-transform: uppercase;
+        z-index: 500;
+    }
+}
+
+.upper { // container
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hamburger {
+    position: absolute;
+    right: 15px;
+    top: 0;
+    z-index: 500;
+}
+
+.navigation {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        line-height: 3rem;
+        width: 100%;
+        height: 100vh;
+        background: $c-echo;
+        list-style: none;
+        text-transform: uppercase;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity .5s;
+    }
+
+    .menu-active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    &__item, &__mobile {
+    }
+
+    &__item-link, &__mobile-link {
+        @include fsize($f-m);
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        line-height: 3rem;
+        color: $c-alfa;
+        padding: 0 0 0 $m;
+    }
+}
+
+.hero {
+    position: relative;
+    top: $header;
+    padding: $l 0;
+    background: $c-charlie;
+    color: $c-alfa;
+}
+
+.textbox {
+    padding-bottom: $xl;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    &__small {
+        @include fsize ($f-xs);
+         line-height: 1.5rem;
+         padding: $m 0;
+    }
+    &__big {
+        @include fsize ($f-m);
+        font-weight: normal;
+        line-height: 2.2rem;
+        padding: $m 0;
+    }
 }
