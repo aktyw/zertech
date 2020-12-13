@@ -1,21 +1,39 @@
 .btn {
-    @include fsize($f-xs, $v-xs);
-    text-align: center;
+    @include fsize($f-s, $v-xs);
     display: inline-block;
     width: 160px;
-    height: 40px;
-    border-radius: 5px;
-    cursor: pointer;
-    border: 2px solid $c-echo;
-    transition: transform .3s, background .3s, border-color .3s;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    text-align: center;
     letter-spacing: 2px;
+    transition: transform .3s, background .3s, border-color .5s;
+    cursor: pointer;
 
     &--primary {
+        position: relative;
         background: $c-echo;
         color: $c-alfa;
+        margin-top: $xl;
+        margin-right: $s;
+        z-index: 10;
 
         @include hocus {
-            background: lighten($c-echo, 10%);
+            background: lighten($c-echo, 5%);
+            box-shadow: 4px 4px 0 0 $c-delta;
+        }
+    }
+
+    @include mobile-big {
+        &--primary {
+            width: 200px;
+            margin-right: $l;
+        }
+    }
+
+    @include laptop {
+        &--primary {
+            margin-top: $xxl;
         }
     }
 }
