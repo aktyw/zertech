@@ -1,6 +1,5 @@
-// Header Height
-
 $header: 60px;
+$background: 900px;
 
 // Margin and Padding sizes
 
@@ -34,3 +33,7 @@ $v-s: "0.4vw";
 $v-m: "0.5vw";
 $v-l: "0.8vw";
 $v-xl: "1vw";
+
+// highlights
+
+$highlight: linear-gradient(180deg, rgba(0, 0, 0, 0) 65%, $c-delta 50%);

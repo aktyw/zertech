@@ -34,6 +34,38 @@
 // # MOBILE
 // ----------------------------------------- //
 
+
+//gsap 
+.bground {
+    position: fixed;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    background: $c-echo;
+    overflow: hidden;
+}
+.slide {
+    position: fixed;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    background: $c-charlie;
+    transform: translateX(-100%);
+    overflow: hidden;
+}
+
+.logo__enter { // gsap start logo
+    position: absolute;
+    z-index: 1100;
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+}
+// gsap end
+
 body {
     background:$c-charlie; //temp
 }
@@ -47,14 +79,6 @@ body {
 }
 
 .logo {
-    &__link{ //temp
-        @include fsize($f-l);
-        color: $c-echo;
-        line-height: $header;
-        text-transform: uppercase;
-        z-index: 500;
-        letter-spacing: 2px;
-    } 
 }
 
 .color {
@@ -164,7 +188,7 @@ body {
         display: inline;
         line-height: 3.2rem;
         color: $c-echo; 
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 65%, $c-delta 50%);
+        background: $highlight;
     }
 }
 
@@ -178,6 +202,18 @@ body {
     background-image: url('../../img/08electrician-installer-with-tool-his-hands-working-with-cable-construction-site.jpg');
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 10%);
     filter: grayscale(35%);
+}
+
+.title {
+    @include fsize($f-m, $v-xl);
+    position: relative;
+    display: inline;
+    font-weight: bold;
+    line-height: 3.2rem;
+    color: $c-echo;
+    text-transform: uppercase;
+    background: $highlight;
+    padding-top: $xl;
 }
 
 // ----------------------------------------- //
@@ -198,7 +234,10 @@ body {
 // ----------------------------------------- //
 
 @include laptop {
-    $background: 800px;// height of HERO
+    .header {
+        height: 100vh;
+    }
+
     .hamburger {
         position: absolute;
         top:50px;
@@ -236,11 +275,12 @@ body {
     }
 
     .hero {
-        padding: 0;
+        padding: $xxl 0;
     }
+
     .textbox {
         width: 50%;
-        height: calc(#{$background} - #{$header}); // same height as .background
+        min-height: calc(#{$background} - #{$header}); // same height as .background
         padding: $xxxl 0;
         letter-spacing: 1px;
 
@@ -270,5 +310,9 @@ body {
             width: 100%;
             height: 100%;
         }
+    }
+
+    .services {
+        height: 100vh;
     }
 }
