@@ -67,7 +67,12 @@
 // gsap end
 
 body {
-    background:$c-charlie; //temp
+    background:$c-charlie; 
+}
+
+.lock { // LOCK SCROLLING FOR MENU
+    overflow-y: hidden;
+    height: 100vh;
 }
 
 .top { // top of header
@@ -79,6 +84,7 @@ body {
 }
 
 .logo {
+    z-index: 100;
 }
 
 .color {
@@ -100,7 +106,7 @@ body {
     z-index: 500;
     outline: transparent;
     &__name {
-        display: none;
+       display: none;
     }
 }
 
@@ -112,8 +118,8 @@ body {
     height: 100px;
 
     @include laptop {
-        top: -46px;
-        left: 21px;
+        top: -50px;
+        left: 24px;
         width: 200px;
         height: 200px;
     }
@@ -128,14 +134,14 @@ body {
         top: 0;
         left: 0;
         line-height: 3rem;
-        width: 100%;
+        width: 100vw;
         height: 100vh;
         background: $c-echo;
         list-style: none;
         text-transform: uppercase;
         pointer-events: none;
         opacity: 0;
-        transition: opacity .6s;
+        transition: opacity .5s;
     }
 
     .menu-active {
@@ -170,7 +176,6 @@ body {
 .textbox {
     position: relative;
     padding-bottom: $xl;
-    // letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: bold;
     z-index: 10;
@@ -193,27 +198,158 @@ body {
 }
 
 .background {
-    @include cover-background;
-    background-position: top right;
     position: relative;
+    background-position: top right;
     display: block;
     width: 100%;
     height: 400px;
-    background-image: url('../../img/08electrician-installer-with-tool-his-hands-working-with-cable-construction-site.jpg');
+    background-image: url('../../img/001.jpg');
+    @include cover-background;
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 10%);
-    filter: grayscale(35%);
+    filter: grayscale(35%) brightness(0.8);
 }
 
 .title {
     @include fsize($f-m, $v-xl);
-    position: relative;
     display: inline;
     font-weight: bold;
     line-height: 3.2rem;
     color: $c-echo;
     text-transform: uppercase;
-    background: $highlight;
-    padding-top: $xl;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.mobile {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background: $c-delta;
+    margin-bottom: $l;
+
+    &__title {
+        @include fsize ($f-l, $v-m);
+        padding-bottom: $l;
+    }
+
+    &__subtitle {
+        @include fsize ($f-m, $v-s);
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+        top: 50%;
+        transform: translateY(50%);
+    }
+
+    &__number {
+        @include fsize ($f-xl, $v-xl);
+    }
+}
+
+
+.services {
+    position: relative;
+    background: $c-charlie;
+    margin-top: $xxxl;
+    padding: $l;
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: $xxl;
+        align-items: center;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: $c-charlie;
+    color: $c-echo;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: $l $xl;
+    transition: background .5s, color .5s;
+
+    &:hover {
+        background: $c-echo;
+        color: $c-alfa;
+    }
+
+    &:hover>&__wrap {
+        padding-top: $s;
+    }
+
+    &__name {
+        @include fsize($f-m, $v-m);
+        padding-top: $xl;
+    }
+
+    &__content {
+        @include fsize($f-s, $v-xs);
+        padding-top: $xl;
+        padding-bottom: $l;
+    }
+
+    &__icon {
+        font-size: 48px;
+        padding-top: $xl;
+    }
+
+    &__wrap {
+        padding-top: $l;
+        transition: padding-top .5s;
+    }
+}
+
+.about {
+    @include cover-background;
+    padding: $l 0;
+    height: 50vh;
+    background: $c-delta;
+    filter: grayscale(40%);
+    background-attachment: fixed;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(#000, 0.60);
+        z-index: -1;
+
+    }
+    &__title {
+        color: $c-charlie;
+    }
+    &__content {
+        margin: $l 0;
+        color:$c-charlie;
+    }
+}
+
+.gallery {
+    padding: $l 0;
+    height: 100vh;
+    &__title {
+
+    }
 }
 
 // ----------------------------------------- //
@@ -227,21 +363,42 @@ body {
             line-height: 3.6rem;
         }
     }
+    .background {
+        height: 500px;
+    }
+}
+// ----------------------------------------- //
+// # TABLET 768px
+// ----------------------------------------- //
+@include tablet {
+    .background {
+        height: 650px;
+    }
+
+    .services {
+        margin-top: 0;
+    }
+
+    .box {
+        width: 450px;
+    }
 }
 
 // ----------------------------------------- //
-// # LAPTOP 1024px
+// # LAPTOP 1025px
 // ----------------------------------------- //
 
 @include laptop {
+
     .header {
-        height: 100vh;
+        min-height: 100%;
     }
 
     .hamburger {
-        position: absolute;
-        top:50px;
-        left: 35%;
+        position: fixed;
+        top: 42px;
+        right: 50%;
+
         &__name {
             @include fsize($f-xs);
             display: inline-block;
@@ -257,6 +414,7 @@ body {
             color: $c-charlie;
         }
     }
+
     .top {
         background: transparent;
     }
@@ -281,7 +439,7 @@ body {
     .textbox {
         width: 50%;
         min-height: calc(#{$background} - #{$header}); // same height as .background
-        padding: $xxxl 0;
+        padding-top: $xxxl;
         letter-spacing: 1px;
 
         &__small {
@@ -296,11 +454,12 @@ body {
     }
     .background {
         position: absolute;
-        right: 0;
+        left: 50%;
         top: calc(-#{$header}); // .background stick the top
+        max-width: 1100px;
+        width: 50%;
         height: $background;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
-        width: 50%;
         z-index: 10;
 
         &::before {
@@ -313,6 +472,18 @@ body {
     }
 
     .services {
-        height: 100vh;
+        padding-top: 0;
     }
+
+    .box {
+        width: 400px;
+        height: 400px;
+        &__name {
+            @include fsize($f-s, $v-m);
+        }
+        &__content {
+            padding-bottom: 0;
+        }
+    }
+    
 }

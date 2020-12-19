@@ -1,5 +1,5 @@
 $header: 60px;
-$background: 900px;
+$background: 850px;
 
 // Margin and Padding sizes
 
@@ -9,14 +9,15 @@ $m: 15px;
 $l: 20px;
 $xl: 30px;
 $xxl: 50px;
-$xxxl: 100px;
+$xxxl: 75px;
+$fat: 100px;
 
 // Media sizes
 
 $mobile-small-width: 320px;
 $mobile-width: 480px;
 $tablet-width: 768px;
-$laptop-width: 1024px;
+$laptop-width: 1025px;
 $desktop-width: 1200px;
 
 // Fonts
@@ -36,4 +37,5 @@ $v-xl: "1vw";
 
 // highlights
 
-$highlight: linear-gradient(180deg, rgba(0, 0, 0, 0) 65%, $c-delta 50%);
+$highlight: linear-gradient(180deg, rgba(0, 0, 0, 0) 65%, $c-charlie 50%);
+$highlightSmall: linear-gradient(180deg, rgba(0, 0, 0, 0) 75%, $c-charlie 50%);
