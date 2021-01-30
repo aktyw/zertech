@@ -1,4 +1,5 @@
 // Scripts
+
 const hamburger = document.querySelector(".hamburger");
 const hamName = document.querySelector(".hamburger__name")
 const navigation = document.querySelector(".navigation");
@@ -10,6 +11,34 @@ const logoBlue = document.querySelector(".logo__blue");
 const logoStart = document.querySelector(".logo__start");
 const lock = document.querySelector(".lock");
 const body = document.querySelector("body");
+const phone = document.querySelector(".phone");
+
+
+document.addEventListener( 'DOMContentLoaded', function () {
+	new Splide( '#image-slider', {
+        type   : 'loop',
+        perPage: 3,
+        // rewind: true,
+        height: '30%',
+        autoplay: true,
+        lazyLoad: 'nearby',
+        gap: '2rem',
+        width: '100%',
+        cover      : true,
+        perMove: '1',
+        interval: '6000',
+        breakpoints: {
+            640: {
+                perPage: 1,
+                height: '60%',
+            },
+            1024: {
+                perPage: 2,
+                height: '50%',
+            }
+        }
+    } ).mount();
+} );
 
 window.addEventListener('scroll', () => {
     const mediaQuery = window.matchMedia('(min-width: 1025px)')
@@ -39,6 +68,10 @@ function mini() {
         width: "100px",
         height: "100px"
     },0)
+    tl.to (".phone", {
+        opacity: "1",
+        display: "block"
+    },0)
 }
 
 function miniRev() {
@@ -59,6 +92,10 @@ function miniRev() {
         width: "200px",
         height: "200px",
         top: "-50px"
+    },0)
+    tl.to (".phone", {
+        opacity:"0",
+        display:"none"
     },0)
 }
 
@@ -152,5 +189,4 @@ function slide() {
         display:"none"
     },2)
 }
-
 

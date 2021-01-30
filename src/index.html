@@ -7,6 +7,8 @@
     <meta name="author" content="Arek Tywonek" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" type="text/css" href="./styles/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 </head>
 <body>
@@ -29,6 +31,8 @@
                     </span>
                     <span class="hamburger__name">MENU</span>
                 </button>
+                <a href="tel:691330720
+                " class="phone"><i class="material-icons phone__icon">phone_iphone</i>691 330 720</a>
                 <nav class="navigation">
                     <ul class="navigation__list">
                         <li class="navigation__item"><a href="#" class="navigation__item-link">Start</a></li>
@@ -56,7 +60,7 @@
     </header>
     <section id="test" class="services">
         <div class="wrapper">
-            <div class="title services__title">Nasza oferta</div>
+            <h2 class="title services__title">Nasza oferta</h2>
             <div class="services__container">
                 <div class="box">
                     <i class="box__icon material-icons">local_fire_department</i>
@@ -103,24 +107,62 @@
             </div>
         </div>
     </section>
-    <section class="mobile">
-        <div class="wrapper mobile__wrapper">
-            <div class="wrap">
-                <h2 class="mobile__title">Masz pytania ?</h2>
-                <p class="mobile__subtitle">Zadzwoń ! Jesteśmy dostępni 24/h</p>
-            </div>
-                <span class="mobile__number">691 330 720</span>
-        </div>
-    </section>
     <section class="about">
         <div class="wrapper">
-            <div class="title about__title">O nas</div>
-            <p class="about__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde impedit fugiat deleniti soluta eligendi ipsam iste quidem atque. Explicabo aut laudantium officia consequatur repellendus, doloremque nemo. Eligendi, exercitationem. Dignissimos eligendi harum delectus ducimus laudantium ipsum architecto in doloribus, tempore odio, minima, aliquam saepe nemo illo nisi officiis eaque. Modi blanditiis numquam eius impedit, ad sunt saepe quae. Magni dolorem in corrupti officia minus nobis facilis eligendi soluta doloribus laborum! Sunt corrupti culpa in dolore praesentium eius, repellat eaque ratione id? Rem cumque ut, praesentium qui consequatur asperiores sapiente accusamus iure! In, eveniet quos alias ex voluptates obcaecati atque vitae eos?</p>
+            <h2 class="title about__title">O nas</h2>
+            <div class="about__wrapper">
+                <p class="about__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde impedit fugiat deleniti soluta eligendi ipsam iste quidem atque. Explicabo aut laudantium officia consequatur repellendus, doloremque nemo. Eligendi, exercitationem. Dignissimos eligendi harum delectus ducimus laudantium ipsum architecto in doloribus, tempore odio, minima, aliquam saepe nemo illo nisi officiis eaque. Modi blanditiis numquam eius impedit, ad sunt saepe quae. Magni dolorem in corrupti officia minus nobis facilis eligendi soluta doloribus laborum! Sunt corrupti culpa in dolore praesentium eius, repellat eaque ratione id? Rem cumque ut, praesentium qui consequatur asperiores sapiente accusamus iure! In, eveniet quos alias ex voluptates obcaecati atque vitae eos?</p>
+                <img src="./img/logoWhite.png" alt="" class="about__logo">
+            </div>
         </div>
     </section>
     <section class="gallery">
         <div class="wrapper">
-            <div class="title gallery__title">Nasze Realizacje</div>
+            <h2 class="title gallery__title">Nasze Realizacje</h2>
+
+            <div id="image-slider" class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <img class="splide__img" src="./img/27electrician-working-near-board-with-wires-installation-connection-electrics.jpg">
+                        </li>
+                        <li class="splide__slide">
+                            <img class="splide__img" src="./img/01builder-with-construction-tools-construction-site.jpg">
+                        </li>
+                        <li class="splide__slide">
+                            <img class="splide__img" src="./img/06electrician-installer-with-tool-his-hands-working-with-cable-construction-site.jpg">
+                        </li>
+                        <li class="splide__slide">
+                            <img class="splide__img" src="./img/07male-electrician-works-switchboard-with-electrical-connecting-cable.jpg">
+                        </li>
+                        <li class="splide__slide">
+                            <img class="splide__img" src="./img/08electrician-installer-with-tool-his-hands-working-with-cable-construction-site.jpg">
+                        </li>
+                        <li class="splide__slide">
+                            <img class="splide__img" src="./img/26electrician-builder-work-examines-cable-connection-electrical-line-fuselage-industrial-switchboard-professional-overalls-with-electrician-s-tool (1).jpg">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="wrapper">
+            <h2 class="title contact__title">Kontakt</h2>
+            <div class="contact__box">
+                <a href="tel:691330720" class="contact__box--phone">691 330 720</a><br>
+                <a href="mailto:biuro@zertech.pl"class="contact__box--mail">biuro@zertech.pl</a><br>
+                <p class="contact__box--address">Kolejowa 3<br>
+                58-370 Boguszów-Gorce</p>
+                <h3 class="contact__box--name">ZERTECH SP. Z O.O.</h3>
+            </div>
+        
+        </div>
+    </section>
+    <section class="news">
+        <div class="wrapper">
+            <h2 class="title news__title">Aktualności</h2>
+            
         </div>
     </section>
 <script src="./scripts/main.js"></script>

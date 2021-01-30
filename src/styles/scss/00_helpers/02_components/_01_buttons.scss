@@ -21,7 +21,7 @@
         @include hocus {
             background: lighten($c-echo, 5%);
             box-shadow: 4px 4px 0 0 $c-delta;
-        }
+        }        
     }
 
     @include mobile-big {
@@ -33,7 +33,7 @@
 
     @include laptop {
         &--primary {
-            margin-top: 70px;
+            margin-top: $xxxl;
         }
     }
 }

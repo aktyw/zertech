@@ -26,10 +26,8 @@
 @import './01_base/01_typography';
 @import './01_base/02_fonts';
 
-// HAMBURGER
+// HAMBURGER 
 @import "../../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
-
-
 // ----------------------------------------- //
 // # MOBILE
 // ----------------------------------------- //
@@ -83,10 +81,6 @@ body {
     z-index: 100;
 }
 
-.logo {
-    z-index: 100;
-}
-
 .color {
     color: $c-alfa;
 }
@@ -97,6 +91,22 @@ body {
     height: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+.logo { //temp logo
+    position: absolute;
+    top: -22px;
+    left: 12px;
+    width: 100px;
+    height: 100px;
+    z-index: 100;
+
+    @include laptop {
+        top: -50px;
+        left: 24px;
+        width: 200px;
+        height: 200px;
+    }
 }
 
 .hamburger {
@@ -110,20 +120,9 @@ body {
     }
 }
 
-.logo { //temp logo
-    position: absolute;
-    top: -22px;
-    left: 12px;
-    width: 100px;
-    height: 100px;
-
-    @include laptop {
-        top: -50px;
-        left: 24px;
-        width: 200px;
-        height: 200px;
+.phone {
+    display: none;
     }
-}
 
 .navigation {
     &__list {
@@ -153,14 +152,14 @@ body {
         display: inline-block;
         width: 100%;
         height: 100%;
-        line-height: 3rem;
+        line-height: 3.5rem;
         color: $c-alfa;
         padding: 0 0 0 $m;
         letter-spacing: 2px;
         transition: color .5s;
 
         @include hocus {
-            color: $c-delta;
+            color: $c-bravo;
         }
     }
 }
@@ -203,17 +202,17 @@ body {
     display: block;
     width: 100%;
     height: 400px;
-    background-image: url('../../img/001.jpg');
+    background-image: url('../../img/construction-worker.jpg');
     @include cover-background;
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 10%);
     filter: grayscale(35%) brightness(0.8);
 }
 
 .title {
-    @include fsize($f-m, $v-xl);
-    display: inline;
+    @include fsize($f-l, $v-xl);
     font-weight: bold;
     line-height: 3.2rem;
+    letter-spacing: 1px;
     color: $c-echo;
     text-transform: uppercase;
 }
@@ -225,48 +224,16 @@ body {
     width: 50%;
 }
 
-.mobile {
-    position: relative;
-    width: 100%;
-    height: 250px;
-    background: $c-delta;
-    margin-bottom: $l;
-
-    &__title {
-        @include fsize ($f-l, $v-m);
-        padding-bottom: $l;
-    }
-
-    &__subtitle {
-        @include fsize ($f-m, $v-s);
-    }
-
-    &__wrapper {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        align-content: center;
-        top: 50%;
-        transform: translateY(50%);
-    }
-
-    &__number {
-        @include fsize ($f-xl, $v-xl);
-    }
-}
-
-
 .services {
     position: relative;
     background: $c-charlie;
-    margin-top: $xxxl;
-    padding: $l;
+    padding: $xl 0;
 
     &__container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding-top: $xxl;
+        padding-top: $l;
         align-items: center;
         max-width: 1400px;
         margin: 0 auto;
@@ -319,21 +286,13 @@ body {
 
 .about {
     @include cover-background;
-    padding: $l 0;
-    height: 50vh;
-    background: $c-delta;
-    filter: grayscale(40%);
-    background-attachment: fixed;
+    padding: $xl 0;
+    height: 100%;
+    background: $c-echo;
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(#000, 0.60);
-        z-index: -1;
-
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
     }
     &__title {
         color: $c-charlie;
@@ -342,14 +301,69 @@ body {
         margin: $l 0;
         color:$c-charlie;
     }
+    &__logo {
+        display: none;
+    }
 }
 
 .gallery {
-    padding: $l 0;
-    height: 100vh;
-    &__title {
+    padding: $xl 0;
 
+    &__title {
+        padding-bottom: $xl;
     }
+}
+
+.splide { //centering gallery
+    margin: 0 auto;
+}
+
+.contact {
+    padding: $xl 0;
+    background: $c-echo;
+    color: $c-charlie;  
+
+    &__title {
+        color:$c-charlie;
+        padding-bottom: $xl;
+    }
+
+    &__box {
+        text-align: center;
+        padding: $xxl 0 $fat 0;
+        
+        &--name {
+            @include fsize(1.2rem);
+            font-weight: normal;
+        }
+
+        &--phone, &--mail {
+            @include fsize(2.4rem);
+            display: inline-block;
+            padding-bottom: $xl;
+            color: $c-charlie;
+
+            &:hover {
+                color: $c-bravo;
+                text-decoration: underline;
+            }
+        }
+
+        &--mail {
+            padding-bottom: $xxxl;
+        }
+
+        &--address{
+            @include fsize(1.2rem);
+            display: inline-block;
+            padding-bottom: $xxl;
+            line-height: 3rem;
+        }
+    }
+}
+
+.news {
+    padding: $xl 0;
 }
 
 // ----------------------------------------- //
@@ -366,6 +380,13 @@ body {
     .background {
         height: 500px;
     }
+
+    .navigation {
+        &__item-link {
+            @include fsize($f-xl);
+            line-height: 4rem;
+        }
+    }
 }
 // ----------------------------------------- //
 // # TABLET 768px
@@ -376,11 +397,35 @@ body {
     }
 
     .services {
-        margin-top: 0;
+        padding: $xxl 0;
+
+        &__container {
+            padding-top: $l;
+        }
+    }
+
+    .about {
+        padding: $xxl 0;
+
+        &__title {
+
+        }
+    }
+
+    .gallery {
+        padding: $xxl 0;
+    
+        &__title {
+            padding-bottom: $xl;
+        }
     }
 
     .box {
         width: 450px;
+    }
+
+    .title {
+        margin-bottom: $l;
     }
 }
 
@@ -392,6 +437,10 @@ body {
 
     .header {
         min-height: 100%;
+    }
+
+    .title {
+        margin-bottom: $xl;
     }
 
     .hamburger {
@@ -419,6 +468,21 @@ body {
         background: transparent;
     }
 
+    .phone {
+        @include fsize ($f-m);
+        display:block;
+        position: absolute;
+        color: $c-echo;
+        right: 30px;
+        line-height: $header;
+        opacity: 0;
+
+        &__icon {
+            @include fsize ($f-xs);
+            margin-right: $s;
+        }
+    }
+
     .navigation {
         &__item {
             @include container;
@@ -443,8 +507,8 @@ body {
         letter-spacing: 1px;
 
         &__small {
-            line-height: 2rem;
-            padding-bottom: $xxl;
+            line-height: 2.5rem;
+            padding-bottom: $xxxl;
         }
 
         &__big {
@@ -459,7 +523,7 @@ body {
         max-width: 1100px;
         width: 50%;
         height: $background;
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
         z-index: 10;
 
         &::before {
@@ -472,12 +536,13 @@ body {
     }
 
     .services {
-        padding-top: 0;
+        padding: $xxl 0 $fat 0;
     }
 
     .box {
         width: 400px;
         height: 400px;
+
         &__name {
             @include fsize($f-s, $v-m);
         }
@@ -485,5 +550,41 @@ body {
             padding-bottom: 0;
         }
     }
+
+    .about {
+        padding: $xxxl 0;
+
+        &__wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        &__content {
+            width: 50%;
+        }
+
+        &__logo {
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    .gallery {
+        padding: $xxl 0;
     
+        &__title {
+            padding-bottom: $xl;
+        }
+
+        .splide__track {
+            padding-top: $xl;
+        }
+    }
+    
+    .contact {
+        padding: $xxl 0;
+    }
 }
