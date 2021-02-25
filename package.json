@@ -21,7 +21,8 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-terser": "^2.0.0",
     "imagemin": "^7.0.1",
-    "postcss": "^8.1.10"
+    "postcss": "^8.1.10",
+    "sass": "^1.32.8"
   },
   "dependencies": {
     "hamburgers": "^1.1.3"

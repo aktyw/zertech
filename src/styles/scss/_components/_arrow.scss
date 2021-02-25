@@ -1,0 +1,57 @@
+@use '../_abstracts/index' as *;
+
+.arrow {
+    position: relative;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 70px;
+    width: 50px;
+    z-index: 50;
+    text-align: center;
+    animation: animate 3.5s infinite;
+
+    @media (max-width: 1024px) {
+        display: none;
+      }
+
+    &__left, &__right {
+        display: inline-block;
+        position: relative;
+        width: 5px;
+        height: 30px;
+        background: $c-echo;
+        line-height: 50px;
+        transform: rotate(-40deg);
+        transition: transform .3s , background .3s;
+        
+    }
+
+    &__right {
+        transform: rotate(40deg);
+        left: 5px;
+    }
+
+    &__left {
+        right: 5px;
+    }
+}
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform:  translateY(-20px);
+    }
+    45%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform:  translateY(20px);
+    }
+}
+
+
+  
+
+

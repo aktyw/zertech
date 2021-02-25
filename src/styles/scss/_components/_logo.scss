@@ -1,0 +1,15 @@
+@use '../_abstracts/index' as *;
+
+.logo { 
+    position: relative;
+    width: 150px;
+    z-index: 100;
+
+    @include laptop {
+        position: absolute;
+        width: 175px;
+        top: 35px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

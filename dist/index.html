@@ -7,39 +7,41 @@
     <meta name="author" content="Arek Tywonek" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" type="text/css" href="./styles/css/main.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.14/dist/css/themes/splide-skyblue.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 </head>
 <body>
     <!-- HEADER , NAV -->
     <div class="bground bground--one"></div>
-    <img class="logo__enter" src="./img/logoWhite.png" alt="">
+    <img class="logo__enter" src="./img/logoWh.svg" alt="Logo Zertech">
     <div class="bground bground--two"></div>
     <div class="slide"></div>
     <div class="slide slide--two"></div>
+    <a href="tel:691330720" class="btn--contact hide"><i class="material-icons icon__phone hide">phone_iphone</i></a>
     <header class="header">
         <div class="top">
             <div class="upper wrapper">
-                <a href="#" class="logo__link">
-                    <img src="./img/logoWhite.png" alt="" class="logo logo__white">
-                    <img src="./img/logoBlue.png" alt="" class="logo logo__blue">
-                </a>
                 <button class="hamburger hamburger--spring" type="button">
                     <span class="hamburger-box">
                       <span class="hamburger-inner"></span>
                     </span>
                     <span class="hamburger__name">MENU</span>
                 </button>
+                <a href="#" class="logo__link">
+                    <img src="./img/logoO.svg" alt="Logo Zertech" class="logo logo__white">
+                </a>
+                
                 <a href="tel:691330720
-                " class="phone"><i class="material-icons phone__icon">phone_iphone</i>691 330 720</a>
+                " class="phone btn btn--phone"><i class="material-icons phone__icon">phone_iphone</i>691 330 720</a>
                 <nav class="navigation">
                     <ul class="navigation__list">
                         <li class="navigation__item"><a href="#" class="navigation__item-link">Start</a></li>
-                        <li class="navigation__item"><a href="#test" class="navigation__item-link">Oferta</a></li>
-                        <li class="navigation__item"><a href="#test" class="navigation__item-link">O firmie</a></li>
-                        <li class="navigation__item"><a href="#test" class="navigation__item-link">Realizacje</a></li>
-                        <li class="navigation__item"><a href="#test" class="navigation__item-link">Kontakt</a></li>
+                        <li class="navigation__item"><a href="#services" class="navigation__item-link">Oferta</a></li>
+                        <li class="navigation__item"><a href="#about" class="navigation__item-link">O firmie</a></li>
+                        <li class="navigation__item"><a href="#gallery" class="navigation__item-link">Galeria</a></li>
+                        <li class="navigation__item"><a href="#contact" class="navigation__item-link">Kontakt</a></li>
+                        <li class="navigation__item"><a href="#news" class="navigation__item-link">Aktualności</a></li>
                     </ul>
                 </nav>
             </div>
@@ -47,20 +49,29 @@
         <div class="hero flex">
             <div class="wrapper">
                 <div class="textbox">
-                    <p class="textbox__small">Profesjonalne usługi montażowo-instalacyjne na terenie Wałbrzycha, Boguszowa-Gorc i okolic.</p>
-                    <h1 class="textbox__big">Ogrzewania Gazowe<br>Instalacje Elektryczne<br>Instalacje  Hydrauliczne<br>Pomiary i Projekty</h1>
+                    
+                    <h1 class="textbox__big">Projektujemy.<br>Montujemy.<br>Instalujemy.
+                    </h1>
+                    <h2 class="textbox__small">
+                        Wykonujemy ogrzewania gazowe, instalacje hydrauliczne, elektryczne i wodno-kanalizacyjne. Projektujemy i wykonujemy pomiary. Pomożemy Ci w uzyskaniu dofinansowania oraz załatwimy wszystkie formalności.
+                    </h2>
                     <div class="btn__box">
-                        <a href="#" class="btn btn--primary">Kontakt</a>
-                        <a href="#" class="btn btn--primary">Oferta</a>
+                        <a href="#contact" class="btn btn--primary">Kontakt</a>
+                        <a href="#services" class="btn btn--secondary">Oferta</a>
                     </div>
                 </div>
+                <div class="arrow">
+                    <span class="arrow__left"></span>
+                    <span class="arrow__right"></span>
+                </div>
             </div>
-            <div class="background"></div>
+            <div class="background">
+            </div>
         </div>
     </header>
-    <section id="test" class="services">
+    <section id="services" class="services">
         <div class="wrapper">
-            <h2 class="title services__title">Nasza oferta</h2>
+            <!-- <h2 class="title services__title">Oferta</h2> -->
             <div class="services__container">
                 <div class="box">
                     <i class="box__icon material-icons">local_fire_department</i>
@@ -101,70 +112,110 @@
                     <i class="box__icon material-icons">done</i>
                     <div class="box__wrap">
                         <h3 class="box__name">Pomoc w uzyskaniu dofinansowania</h3>
-                        <p class="box__content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat harum dolores quibusdam necessitatibus ab. Consequuntur.</p>
+                        <p class="box__content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat harum dolores quibusdam necessitatibus ab. Consequuntur.Inventore repellat dolorum.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="about">
+    <section id="about" class="about">
         <div class="wrapper">
             <h2 class="title about__title">O nas</h2>
-            <div class="about__wrapper">
-                <p class="about__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde impedit fugiat deleniti soluta eligendi ipsam iste quidem atque. Explicabo aut laudantium officia consequatur repellendus, doloremque nemo. Eligendi, exercitationem. Dignissimos eligendi harum delectus ducimus laudantium ipsum architecto in doloribus, tempore odio, minima, aliquam saepe nemo illo nisi officiis eaque. Modi blanditiis numquam eius impedit, ad sunt saepe quae. Magni dolorem in corrupti officia minus nobis facilis eligendi soluta doloribus laborum! Sunt corrupti culpa in dolore praesentium eius, repellat eaque ratione id? Rem cumque ut, praesentium qui consequatur asperiores sapiente accusamus iure! In, eveniet quos alias ex voluptates obcaecati atque vitae eos?</p>
-                <img src="./img/logoWhite.png" alt="" class="about__logo">
+            <p class="about__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores vero ab consequuntur eius fuga eveniet harum cupiditate adipisci magnam repellendus! Quasi, provident? Nemo dolor molestiae, dolorem expedita dolores doloremque autem perferendis ab voluptas nulla, et qui distinctio reprehenderit libero, facilis ex incidunt sapiente nobis excepturi provident corrupti temporibus odit? Eum sit deleniti eius. Praesentium quo sed possimus iste illo ducimus cumque, atque facilis ipsam nisi tempora numquam veritatis non odio nesciunt. Perspiciatis laboriosam deserunt aperiam ipsum enim ipsam repudiandae. Voluptas, aliquid! Id ea deserunt asperiores at eum nemo corporis nihil doloremque optio. Commodi iure doloremque quia beatae fugit provident molestiae!</p>
+        </div>
+        
+    </section>
+    <span id="gallery"></span>
+    <section  class="gallery">
+            <h2  class="title gallery__title">Realizacje</h2>
+        <div id="image-slider" class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img class="splide__img" src="./img/010.jpg">
+                    </li>
+                    <li class="splide__slide">
+                        <img class="splide__img" src="./img/011.jpg">
+                    </li>
+                    <li class="splide__slide">
+                        <img class="splide__img" src="./img/012.jpg">
+                    </li>
+                    <li class="splide__slide">
+                        <img class="splide__img" src="./img/013.jpg">
+                    </li>
+                    <li class="splide__slide">
+                        <img class="splide__img" src="./img/014.jpg">
+                    </li>
+                    <li class="splide__slide">
+                        <img class="splide__img" src="./img/015.jpg">
+                    </li>
+                </ul>
             </div>
         </div>
-    </section>
-    <section class="gallery">
-        <div class="wrapper">
-            <h2 class="title gallery__title">Nasze Realizacje</h2>
 
-            <div id="image-slider" class="splide">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide">
-                            <img class="splide__img" src="./img/27electrician-working-near-board-with-wires-installation-connection-electrics.jpg">
-                        </li>
-                        <li class="splide__slide">
-                            <img class="splide__img" src="./img/01builder-with-construction-tools-construction-site.jpg">
-                        </li>
-                        <li class="splide__slide">
-                            <img class="splide__img" src="./img/06electrician-installer-with-tool-his-hands-working-with-cable-construction-site.jpg">
-                        </li>
-                        <li class="splide__slide">
-                            <img class="splide__img" src="./img/07male-electrician-works-switchboard-with-electrical-connecting-cable.jpg">
-                        </li>
-                        <li class="splide__slide">
-                            <img class="splide__img" src="./img/08electrician-installer-with-tool-his-hands-working-with-cable-construction-site.jpg">
-                        </li>
-                        <li class="splide__slide">
-                            <img class="splide__img" src="./img/26electrician-builder-work-examines-cable-connection-electrical-line-fuselage-industrial-switchboard-professional-overalls-with-electrician-s-tool (1).jpg">
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </section>
-    <section class="contact">
+    <section id="contact" class="contact">
         <div class="wrapper">
             <h2 class="title contact__title">Kontakt</h2>
             <div class="contact__box">
-                <a href="tel:691330720" class="contact__box--phone">691 330 720</a><br>
-                <a href="mailto:biuro@zertech.pl"class="contact__box--mail">biuro@zertech.pl</a><br>
-                <p class="contact__box--address">Kolejowa 3<br>
-                58-370 Boguszów-Gorce</p>
-                <h3 class="contact__box--name">ZERTECH SP. Z O.O.</h3>
+                <div class="boxOne">
+                    <a href="tel:691330720"  class="contact__wrap">
+                        <i class="material-icons contact__icon">phone_iphone</i>
+                        <p class="contact__box--phone contact__content">+48 691 330 720</p>
+                    </a>
+                    <a href="https://goo.gl/maps/qs9bbQdJLQdqKtw49" target="_blank"  class="contact__wrap">
+                        <i class="material-icons contact__icon">place</i>
+                        <p class="contact__box--address contact__content">Boguszów-Gorce, Kolejowa 3</p>
+                    </a>
+                    <a href="mailto:biuro@zertech.pl" class="contact__wrap">
+                        <i class="material-icons contact__icon">email</i>
+                        <p class="contact__box--mail contact__content">biuro@zertech.pl</p>
+                    </a>
+                    
+                </div>
             </div>
-        
+        </div>
+        <div class="boxTwo">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40388.467467200666!2d16.169653539502068!3d50.751856150113156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470e57ae6e8c355d%3A0x4b49a04a7e0309c2!2sKolejowa%203%2C%2058-370%20Bogusz%C3%B3w-Gorce!5e0!3m2!1spl!2spl!4v1613001492385!5m2!1spl!2spl" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
     </section>
-    <section class="news">
+    <section id="news" class="news">
         <div class="wrapper">
             <h2 class="title news__title">Aktualności</h2>
+
+            <div class="news__container">
+                <div class="news__box">
+                    <p class="news__data">20 feb 21</p>
+                    <img src="./img/020.jpg" alt="" class="news__image">
+                    <h3 class="news__name">Tytuł newsa</h3>
+                    <p class="news__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident sit quasi iure eligendi ex dolores beatae deserunt, ipsa minima ut earum sapiente perspiciatis doloribus delectus! Commodi, libero. Nostrum quos nam culpa minus laborum ad, consectetur eum! Architecto illo sapiente, debitis perspiciatis eum odit quidem sunt magni quod iste dolores consequatur dolorem velit incidunt? Animi expedita ipsam temporibus, ut, impedit voluptatem reprehenderit voluptatibus explicabo, repudiandae in sapiente! Laborum ipsum deleniti hic?</p>
+                    <a href="" target="_blank" class="news__more">Więcej</a>
+                </div>
+
+                <div class="news__box">
+                    <p class="news__data">20 feb 21</p>
+                    <img src="./img/020.jpg" alt="" class="news__image">
+                    <h3 class="news__name">Tytuł newsa</h3>
+                    <p class="news__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident sit quasi iure eligendi ex dolores beatae deserunt, ipsa minima ut earum sapiente perspiciatis doloribus delectus! Commodi, libero. Nostrum quos nam culpa minus laborum ad, consectetur eum! Architecto illo sapiente, debitis perspiciatis eum odit quidem sunt magni quod iste dolores consequatur dolorem velit incidunt? Animi expedita ipsam temporibus, ut, impedit voluptatem reprehenderit voluptatibus explicabo, repudiandae in sapiente! Laborum ipsum deleniti hic?</p>
+                    <a href="" target="_blank" class="news__more">Więcej</a>
+                </div>
+
+                <div class="news__box">
+                    <p class="news__data">20 feb 21</p>
+                    <img src="./img/020.jpg" alt="" class="news__image">
+                    <h3 class="news__name">Tytuł newsa</h3>
+                    <p class="news__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident sit quasi iure eligendi ex dolores beatae deserunt, ipsa minima ut earum sapiente perspiciatis doloribus delectus! Commodi, libero. Nostrum quos nam culpa minus laborum ad, consectetur eum! Architecto illo sapiente, debitis perspiciatis eum odit quidem sunt magni quod iste dolores consequatur dolorem velit incidunt? Animi expedita ipsam temporibus, ut, impedit voluptatem reprehenderit voluptatibus explicabo, repudiandae in sapiente! Laborum ipsum deleniti hic?</p>
+                    <a class="news__more" href="" target="_blank">Więcej</a>
+                </div>
+            </div>
             
         </div>
     </section>
+    <footer class="footer">
+        <div class="footer__box">
+            
+        </div>
+    </footer>
 <script src="./scripts/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,129 @@
+@use '../_abstracts/index' as *;
+
+#contact:target {
+    scroll-margin-top: 90px;
+}
+
+.contact {
+    
+    &__title {
+        padding-bottom: $xl;
+    }
+
+    &__icon {
+        font-size: 36px;
+        padding-right: $l;
+        color: $c-echo;
+    }
+
+    &__wrap {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: $l 0;
+        min-height: 125px;
+    }
+
+    .boxOne {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: $xxl;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        padding: $s 0;
+
+        &--phone, &--mail, &--address {
+            @include fsize($f-l, $v-m);
+            color: $c-echo;
+        }
+    }
+}
+
+@include tablet {
+    .contact {
+        &__icon {
+            font-size: 40px;
+            color: $c-echo;
+        }
+
+        &__box {
+            &--phone, &--mail, &--address {
+                @include fsize($f-l, $v-l);
+            }
+        }
+    }
+}
+
+@include laptop {
+    
+    .contact {
+        padding: $xfat 0 $xl 0;
+        
+        .boxOne {
+            flex-direction: row;
+            justify-content: space-between;
+            padding-bottom: $xxl;
+        }
+
+        &__wrap {
+            flex-direction: column;
+            height: 200px;
+            justify-content: space-evenly;
+            padding: $l $xxl;
+            transition: background .3s;
+
+            &:hover {
+                background: $c-echo;
+                cursor: pointer;
+            }
+
+            &:hover .contact__content{
+                color: $c-charlie;
+                cursor: pointer;
+            }
+
+            &:hover .contact__icon{
+                color: $c-charlie;
+            }
+        }
+
+        &__title {
+            padding-bottom: $xl;
+        }
+
+        &__content {
+            transition: color .3s;
+        }
+
+        &__icon {
+            font-size: 48px;
+            transition: color .3s;
+        }
+
+        &__box {
+            padding: $xxl 0;
+            &--phone, &--mail, &--address {
+                @include fsize($f-m, $v-l);
+            }
+        }
+    }
+}
+
+@include qhd {
+
+    .contact {
+        &__wrap {
+            padding: $l $xl;
+        }
+    
+        &__box {
+            &--phone, &--mail, &--address {
+                @include fsize($f-m, $v-m);
+            }
+        }
+    }
+}

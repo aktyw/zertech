@@ -9,6 +9,8 @@ const sass = require('gulp-sass');
 const sourcemaps = require ('gulp-sourcemaps');
 const terser = require('gulp-terser');
 
+sass.compiler = require("sass");
+
 function style() {
     return gulp.src('./src/styles/scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))

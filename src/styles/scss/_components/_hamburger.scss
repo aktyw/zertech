@@ -1,0 +1,37 @@
+@use '../_abstracts/index' as *;
+
+.hamburger {
+    position: absolute;
+    right: 15px;
+    top: 0;
+    z-index: 500;
+    outline: transparent;
+
+    &__name {
+       display: none;
+    }
+}
+
+@include laptop {
+    
+    .hamburger {
+        position: relative;
+        top: 42px;
+    
+        &__name {
+            @include fsize($f-xs);
+            display: inline-block;
+            color: $c-echo;
+            font-weight: bold;
+            position: relative;
+            padding-right: $s;
+            bottom: 4px;
+            left: 10px;
+            letter-spacing: 1px;
+        }
+    
+        .hamcolor { 
+            color: $c-charlie;
+        }
+    }
+}

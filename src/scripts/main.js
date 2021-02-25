@@ -1,41 +1,68 @@
 // Scripts
 
 const hamburger = document.querySelector(".hamburger");
-const hamName = document.querySelector(".hamburger__name")
+const hamName = document.querySelector(".hamburger__name");
 const navigation = document.querySelector(".navigation");
 const menu = document.querySelector(".navigation__list");
 const links = document.querySelectorAll(".navigation__item-link");
 const up = document.querySelector(".top");
 const logoWhite = document.querySelector(".logo__white");
-const logoBlue = document.querySelector(".logo__blue");
 const logoStart = document.querySelector(".logo__start");
 const lock = document.querySelector(".lock");
 const body = document.querySelector("body");
 const phone = document.querySelector(".phone");
+const mobile = document.querySelectorAll(".btn--contact, .icon__phone");
+const background = document.querySelector(".background");
 
+
+window.addEventListener('scroll', () => { // get height of hero image and active when below
+    if(background.getBoundingClientRect().top < (background.getBoundingClientRect().height - 500)) {
+        mobile.forEach( el => {
+            el.classList.remove('hide');
+        });
+    } else {
+        mobile.forEach(el => {
+            el.classList.add('hide');
+        })
+    };
+});
 
 document.addEventListener( 'DOMContentLoaded', function () {
 	new Splide( '#image-slider', {
         type   : 'loop',
-        perPage: 3,
-        // rewind: true,
-        height: '30%',
+        height: '700px',
+        width: '60%',
+        gap: '3rem',
         autoplay: true,
         lazyLoad: 'nearby',
-        gap: '2rem',
-        width: '100%',
         cover      : true,
         perMove: '1',
-        interval: '6000',
+        interval: '4000',
+        padding: {
+            left : 0,
+            right: '15rem',
+        },
         breakpoints: {
             640: {
-                perPage: 1,
-                height: '60%',
+                height: '75%',
+                width: '100%',
+                padding: {
+                    left : 0,
+                    right: 0,
+                },
             },
             1024: {
-                perPage: 2,
                 height: '50%',
-            }
+                width: '100%',
+                padding: {
+                    left : 0,
+                    right: 0,
+                },
+            },
+            1920: {
+                height: '600px',
+                width: '80%',
+            },
         }
     } ).mount();
 } );
@@ -53,20 +80,14 @@ function mini() {
     let tl = gsap.timeline({duration: 0.2});
     tl.to (".hamburger", {
         top: "0px",
-        x: "55%"
     },0)
     tl.to (".top", {
         background: '#fff',
     },0)
-    tl.to (".logo__blue", {
-        top: "-20px",
-        width: "100px",
-        height: "100px",
-    },0)
     tl.to (".logo__white", {
-        top: "-20px",
-        width: "100px",
-        height: "100px"
+        top: "8px",
+        width: "125px",
+        opacity: '0',
     },0)
     tl.to (".phone", {
         opacity: "1",
@@ -83,15 +104,10 @@ function miniRev() {
     tl.to (".top", {
         background: 'transparent',
     },0)
-    tl.to (".logo__blue", {
-        width: "200px",
-        height: "200px",
-        top: "-50px"
-    },0)
     tl.to (".logo__white", {
-        width: "200px",
-        height: "200px",
-        top: "-50px"
+        width: "175px",
+        top: "35px",
+        opacity: '1',
     },0)
     tl.to (".phone", {
         opacity:"0",
@@ -102,8 +118,7 @@ function miniRev() {
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('is-active');
     menu.classList.toggle('menu-active');
-    logoWhite.classList.remove('hide');
-    logoBlue.classList.toggle('hide');
+    logoWhite.classList.toggle('hide');
     hamName.classList.toggle('hamcolor');
     body.classList.toggle('lock');
 })
@@ -115,9 +130,8 @@ links.forEach(link => {
             body.classList.remove('lock');
             hamburger.classList.remove('is-active');
             menu.classList.remove('menu-active');
-            logoWhite.classList.toggle('hide');
-            logoBlue.classList.toggle('hide');
             hamName.classList.remove('hamcolor');
+            logoWhite.classList.remove('hide');
         },500)
     });
 });
@@ -125,12 +139,12 @@ links.forEach(link => {
 function start() {
     let tl = gsap.timeline();
     tl.to(".bground--one", {
-        duration: 1.5,
+        duration: 0.8,
         ease: Power4.easeOut,
         y: "100%"
     },1);
     tl.to(".bground--two", {
-        duration: 1.5,
+        duration: 0.8,
         ease: Power4.easeOut,
         y: "-100%"
     },1);
@@ -143,14 +157,14 @@ function start() {
     tl.fromTo(".logo__enter", {
         opacity: 1
     }, {
-        duration: 0.5,
+        duration: 0.2,
         opacity: 0,
     },1);
     tl.to(".logo__enter", {
         display:"none"
     },2)
 };
-
+ 
 window.addEventListener('load', start);
 
 
@@ -189,4 +203,6 @@ function slide() {
         display:"none"
     },2)
 }
+
+
 
