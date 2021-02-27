@@ -38,14 +38,12 @@
 }
 
 @include laptop {
-
     .background {
         position: absolute;
         left: 45%;
         top: calc(-#{$header}); // .background stick the top
-        // max-width: 1100px;
         width: 55%;
-        height: $background;
+        height: 700px;
         // clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
         clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
         z-index: 10;
@@ -58,5 +56,14 @@
             height: 100%;
             background: transparent;
         }
+    }
+}
+
+@include desktop {
+
+    .background {
+        top: calc(-#{$header}); // .background stick the top
+        width: 55%;
+        height: $background;
     }
 }

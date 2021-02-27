@@ -68,11 +68,11 @@
 @include tablet {
     .navigation {
         &__list {
-            padding-top: 200px;
+            padding-top: 150px;
         }
         &__item-link {
             padding: 0 0 0 $xl;
-            line-height: 4.5rem;
+            line-height: 4rem;
         }
     }
 }
@@ -83,6 +83,17 @@
             @include container;
             width: 100%;
         }
+        &__item-link {
+            @include fsize($f-l);
+            padding: 0 $xxl;
+            letter-spacing: 2px;
+            line-height: 4rem;
+        }
+    }
+}
+
+@include desktop {
+    .navigation {
         &__item-link {
             @include fsize($f-xl);
             padding: 0 $xl;

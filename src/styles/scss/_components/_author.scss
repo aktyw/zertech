@@ -1,0 +1,16 @@
+@use '../_abstracts/index' as *;
+
+.author {
+    @include fsize ($f-s, $v-s);
+    text-align: center;
+    padding-bottom: $xxl;
+
+    &__link {
+        @include fsize ($f-s, $v-s);
+        color: $c-bravo;
+
+        &:hover {
+            color: $c-foxtrot;
+        }
+    }
+}

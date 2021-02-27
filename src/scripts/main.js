@@ -30,7 +30,7 @@ window.addEventListener('scroll', () => { // get height of hero image and active
 document.addEventListener( 'DOMContentLoaded', function () {
 	new Splide( '#image-slider', {
         type   : 'loop',
-        height: '700px',
+        height: '800px',
         width: '60%',
         gap: '3rem',
         autoplay: true,
@@ -59,9 +59,13 @@ document.addEventListener( 'DOMContentLoaded', function () {
                     right: 0,
                 },
             },
-            1920: {
-                height: '600px',
+            1440: {
+                height: '500px',
                 width: '80%',
+            },
+            2500: {
+                height: '600px',
+                width: '70%',
             },
         }
     } ).mount();
