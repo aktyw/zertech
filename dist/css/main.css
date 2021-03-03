@@ -988,7 +988,7 @@ img {
   }
 }
 #contact:target {
-  scroll-margin-top: 90px;
+  scroll-margin-top: 60px;
 }
 
 .contact__title {
@@ -1198,7 +1198,7 @@ img {
 }
 
 .news {
-  padding-top: 50px;
+  padding: 50px 50px 20px;
 }
 
 .news__title {
@@ -1273,6 +1273,7 @@ img {
 @media (min-width: 768px) {
   .news {
     padding-top: 100px;
+    padding-bottom: 50px;
   }
 
   .news__box {

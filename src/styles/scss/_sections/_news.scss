@@ -5,7 +5,8 @@
 }
 
 .news {
-    padding-top: $xxl;
+    padding: $xxl;
+    padding-bottom: $l;
 
     &__title {
         padding-bottom: $xxl;
@@ -86,6 +87,7 @@
 @include tablet {
     .news {
         padding-top: $fat;
+        padding-bottom: $xxl;
 
         &__box {
         margin-bottom: $xxxl;
