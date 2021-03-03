@@ -6,7 +6,7 @@
     display: block;
     width: 100%;
     height: 400px;
-    background-image: url('../../img/construction-worker.jpg');
+    background-image: url('../images/construction-worker.jpg');
     @include cover-background;
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0%);
     // filter: grayscale(30%);
