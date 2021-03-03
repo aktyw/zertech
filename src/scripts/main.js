@@ -169,7 +169,7 @@ function start() {
     },2)
 };
  
-window.addEventListener('load', start);
+window.addEventListener('DOMContentLoaded', start);
 
 
 function reset() {
