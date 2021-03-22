@@ -675,17 +675,14 @@ img {
   }
 }
 @media (min-width: 768px) {
-  .box {
-    width: 400px;
-    height: 400px;
-  }
-
   .box__name {
     font-size: calc(1.2rem + 1vw);
   }
 }
-@media (min-width: 1025px) {
+@media (min-width: 900px) {
   .box {
+    width: 400px;
+    min-height: 450px;
     padding: 20px 30px;
   }
 
@@ -700,8 +697,6 @@ img {
 }
 @media (min-width: 1440px) {
   .box {
-    width: 400px;
-    height: 400px;
     padding: 20px 30px;
   }
 }

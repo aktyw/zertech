@@ -23,6 +23,12 @@
       @content;
     }
   }
+
+  @mixin tablet-big-width {
+    @media (min-width: #{$tablet-big-width}) {
+      @content;
+    }
+  }
   
   @mixin laptop {
     @media (min-width: #{$laptop-width}) {

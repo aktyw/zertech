@@ -143,12 +143,12 @@ links.forEach(link => {
 function start() {
     let tl = gsap.timeline();
     tl.to(".bground--one", {
-        duration: 0.5,
+        duration: 0.7,
         ease: Power4.easeOut,
         y: "100%"
     },1);
     tl.to(".bground--two", {
-        duration: 0.5,
+        duration: 0.7,
         ease: Power4.easeOut,
         y: "-100%"
     },1);
@@ -161,7 +161,7 @@ function start() {
     tl.fromTo(".logo__enter", {
         opacity: 1
     }, {
-        duration: 0.15,
+        duration: 0.2,
         opacity: 0,
     },1);
     tl.to(".logo__enter", {

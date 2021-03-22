@@ -55,8 +55,6 @@
 
 @include tablet {
     .box {
-        width: 400px;
-        height: 400px;
 
         &__name {
         @include fsize($f-m, $v-xl);
@@ -64,8 +62,10 @@
     }
 }
 
-@include laptop {
+@include tablet-big-width {
     .box {
+        width: 400px;
+        min-height: 450px;
         padding: $l $xl;
 
         &__name {
@@ -80,8 +80,6 @@
 
 @include desktop {
     .box {
-        width: 400px;
-        height: 400px;
         padding: $l $xl;
     }
 }
