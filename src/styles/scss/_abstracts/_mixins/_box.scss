@@ -1,6 +1,0 @@
-@use '../_variables' as *;
-
-@mixin box($width, $height: $width) {
-    width: $width;
-    height: $height;
-  }

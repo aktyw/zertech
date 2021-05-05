@@ -1,7 +1,0 @@
-@use '../_abstracts/index' as *;
-
-@include laptop {
-    .header {
-        min-height: 100%;
-    }
-}
