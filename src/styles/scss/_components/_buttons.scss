@@ -1,0 +1,107 @@
+@use '../_abstracts/index' as *;
+
+.btn {
+    @include fsize($f-s, $v-xs);
+    display: inline-block;
+    width: 180px;
+    height: 55px;
+    line-height: 55px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: transform .3s, background .3s, color .3s;
+    cursor: pointer;
+
+    &--primary {
+        position: relative;
+        background: $c-echo;
+        color: $c-alfa;
+        margin-top: $m;
+        margin-bottom: $xxl;
+        z-index: 10;
+        text-transform: uppercase;
+
+        &:hover {
+            background: $c-foxtrot;
+            // box-shadow: 4px 4px 0 0 $c-echo;
+            color: $c-charlie;
+        }        
+    }
+
+    &--secondary {
+        display: none;
+        @extend .btn--primary;
+        background: $c-bravo;
+        color: $c-echo;
+
+        &:hover {
+            background: $c-foxtrot;
+            // box-shadow: 3px 3px 0 0 $c-echo;
+            color: $c-charlie;
+        }
+    }
+
+    &--phone {
+        width: 250px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0;
+        top: 5px;
+        background: $c-charlie;
+        color: $c-echo;
+        font-weight: normal;
+
+        @include hocus {
+            text-decoration: none;
+            background: $c-echo;
+            // box-shadow: 3px 3px 0 0 $c-echo;
+            color: $c-charlie;
+        }
+        @include qhd {
+            width: 350px;
+        }
+    }
+
+    @include mobile-big {
+
+        &--primary {
+            width: 200px;
+            margin-right: $l;
+        }
+    }
+
+    @include laptop {
+        & {
+            display: block;
+        }
+        
+        &--primary {
+            margin-right: $xl;
+        }
+    }
+
+    &--contact {
+        @extend .btn;
+        position: fixed;
+        background: $c-echo;
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 10px;
+        border-radius: 50%;
+        z-index: 100;
+        transition: opacity 1s;
+        box-shadow: 0px 8px 8px -5px $c-echo;
+
+        .icon__phone {
+            color: $c-charlie;
+            line-height: 50px;
+            font-size: $xl;
+        }
+    
+        @media (min-width: 1024px) {
+            display: none;
+        }
+    }
+
+}

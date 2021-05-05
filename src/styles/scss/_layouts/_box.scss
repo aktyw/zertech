@@ -1,0 +1,85 @@
+@use '../_abstracts/index' as *;
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: transparent;
+    text-align: left;
+    color: $c-echo;
+    width: 100%;
+    height: 100%;
+    padding: $l 0;
+    transition: background .5s, color .5s;
+    z-index: 50;
+
+    &:hover {
+        background: $c-echo;
+        color: $c-alfa;
+    }
+
+    &:hover>&__wrap {
+        padding-top: $s;
+    }
+
+    &__name {
+        @include fsize($f-l, $v-m);
+        padding-top: $xl;
+        text-align: left;
+    }
+
+    &__content {
+        @include fsize($f-s, $v-s);
+        padding-top: $xl;
+        padding-bottom: $l;
+    }
+
+    &__icon {
+        font-size: 48px;
+        padding-top: $xl;
+    }
+
+    &__wrap {
+        padding-top: $s;
+        transition: padding-top .5s;
+    }
+}
+
+@include mobile {
+    .box {
+        padding: $l;
+    }
+    
+}
+
+@include tablet {
+    .box {
+
+        &__name {
+        @include fsize($f-m, $v-xl);
+    }
+    }
+}
+
+@include tablet-big-width {
+    .box {
+        width: 400px;
+        min-height: 450px;
+        padding: $l $xl;
+
+        &__name {
+            @include fsize($f-m, $v-s);
+        }
+        &__content {
+            @include fsize($f-s, $v-xs);
+            padding-bottom: 0;
+        }
+    }
+}
+
+@include desktop {
+    .box {
+        padding: $l $xl;
+    }
+}

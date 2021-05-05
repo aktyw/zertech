@@ -1,0 +1,24 @@
+@use '../_abstracts/index' as *;
+
+.navbar {
+    padding-bottom: $xxl;
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        text-align: center;
+    }
+
+    &__item-link {
+        color: $c-bravo;
+        @include fsize ($f-s, $v-s);
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 1px;
+
+        &:hover {
+            color: $c-foxtrot;
+        }
+    }
+}

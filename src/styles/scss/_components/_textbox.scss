@@ -1,0 +1,107 @@
+@use '../_abstracts/index' as *;
+
+.textbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+    padding-top: $xxxl;
+    
+    &__small {
+        @include fsize ($f-s, $v-l);
+        line-height: 2rem;
+        padding-bottom: $xl;
+        text-align: left;
+        font-weight: normal;
+        max-width: 700px;
+    }
+    &__big {
+        @include fsize ($f-xxl, $v-xs);
+        position: relative;
+        line-height: 3.6rem;
+        color: $c-echo;
+        padding-bottom: $xl;
+        font-weight: 900;
+    }
+}
+
+@include mobile-small    {
+    .textbox {
+        &__big {
+            @include fsize ($f-xl, $v-xs);
+        }
+    }
+}
+
+@include mobile-big {
+    .textbox {
+
+        &__small {
+            @include fsize ($f-s, $v-m);
+        }
+        &__big {
+            @include fsize ($f-l, $v-xl);
+        }
+    }
+}
+
+@include tablet {
+    .textbox {
+        padding-top: $xfat;
+
+        &__big {
+            @include fsize ($f-fat, $v-l);
+        }
+
+        &__small {
+            width: 75%;
+        }
+    }
+}
+
+@include laptop {
+    .textbox {
+        position: relative;
+        width: 50%;
+        justify-content: flex-start;
+        height: calc(#{700px} - #{$header}); // same height as .background
+        letter-spacing: 1px;
+        padding-top: $xxxl;
+        &__small {
+            @include fsize ($f-xs, $v-m);
+            line-height: 2.2rem;
+            padding-bottom:$xl;
+            width: 100%;
+        }
+    
+        &__big {
+            @include fsize($f-xl, $v-xl);
+            line-height: 3.5rem;
+            padding-bottom: $xl;
+        }
+    }
+}
+
+@include desktop {
+    .textbox {
+        justify-content: center;
+        height: calc(#{$background} - #{$header});
+        top: 0;
+        padding-top: 0;
+    
+        &__small {
+            @include fsize ($f-s, $v-s);
+            line-height: 2.5rem;
+            padding-bottom:$xxl;
+            width: 100%;
+        }
+    
+        &__big {
+            @include fsize($f-fat, $v-xl);
+            line-height: 4.5rem;
+            padding-bottom: $xxl;
+        }
+    }
+}
+

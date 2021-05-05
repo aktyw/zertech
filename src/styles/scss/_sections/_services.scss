@@ -1,0 +1,44 @@
+@use '../_abstracts/index' as *;
+
+#services:target {
+    scroll-margin-top: -30px;
+}
+
+.services {
+    position: relative;
+    background: $c-charlie;
+    padding: $xxxl 0 $xxl 0;
+
+    &__title {
+        padding-bottom: $l;
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+@include tablet {
+    .services {
+        padding: $fat 0 $xxxl 0;
+
+        &__title {
+            padding: $xxl 0;
+        }
+    }
+}
+
+@include laptop {
+    .services {
+        padding: calc(#{$header} + #{$fat}) 0 $xfat 0;
+
+        &__title {
+            padding-bottom: $xxl;
+        }
+    }
+}

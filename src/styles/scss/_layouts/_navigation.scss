@@ -1,0 +1,104 @@
+@use '../_abstracts/index' as *;
+
+.navigation {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        padding-top: 150px;
+        top: 0;
+        left: 0;
+        line-height: 3rem;
+        width: 100vw;
+        height: 100vh;
+        background: $c-echo;
+        list-style: none;
+        text-transform: uppercase;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity .4s;
+    }
+
+    .menu-active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    &__item-link {
+        @include fsize($f-l, $v-xl);
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        line-height: 3.5rem;
+        color: $c-alfa;
+        padding: 0 0 0 $m;
+        letter-spacing: 2px;
+        transition: color .5s;
+
+        &::after {
+            @include pseudo;
+            position: relative;
+            right: 6%;
+            bottom: 26px;
+            width: 0%;
+            height: 3px;
+            transition: width .3s, background-color .3s;
+        }
+
+        &:hover::after {
+            background-color: $c-bravo;
+            width: 4%;
+        }
+
+        @include hocus {
+            color: $c-bravo;
+        }
+    }
+}
+
+@include mobile-big {
+    .navigation {
+        &__item-link {
+            @include fsize($f-xl);
+            line-height: 4rem;
+        }
+    }
+}
+
+@include tablet {
+    .navigation {
+        &__list {
+            padding-top: 150px;
+        }
+        &__item-link {
+            padding: 0 0 0 $xl;
+            line-height: 4rem;
+        }
+    }
+}
+
+@include laptop {
+    .navigation {
+        &__item {
+            @include container;
+            width: 100%;
+        }
+        &__item-link {
+            @include fsize($f-l);
+            padding: 0 $xxl;
+            letter-spacing: 2px;
+            line-height: 4rem;
+        }
+    }
+}
+
+@include desktop {
+    .navigation {
+        &__item-link {
+            @include fsize($f-xl);
+            padding: 0 $xl;
+            letter-spacing: 4px;
+            line-height: 5rem;
+        }
+    }
+}

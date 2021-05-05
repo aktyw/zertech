@@ -1,0 +1,19 @@
+@use '../_abstracts/index' as *;    
+
+.links {
+padding-bottom: $xxl;
+text-align: center;
+    &__element {
+        @include fsize ($f-s, $v-s);
+        color: $c-bravo;
+
+        &:hover {
+            color: $c-foxtrot;
+        }
+    }
+
+    &__info {
+        @include fsize ($f-s, $v-s);
+        color: $c-charlie;
+    }
+}
